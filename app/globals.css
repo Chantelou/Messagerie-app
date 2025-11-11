@@ -379,7 +379,7 @@ body {
 
 @media (max-width: 640px) {
   .chat-container {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .chat-sidebar {

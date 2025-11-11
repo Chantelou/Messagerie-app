@@ -45,8 +45,7 @@ function App() {
   return (
     <div className="chat-container">
       {/* On demande l'autorisation des notifications push */}
-      <ActivePushNotifications />
-
+     {/*  <ActivePushNotifications /> */}
       <Amis />
       <Discutions contacts={contacts} currentContact={currentContact} />
 
