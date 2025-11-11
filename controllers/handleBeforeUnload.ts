@@ -1,0 +1,5 @@
+// 🔹 Fonction exécutée avant la fermeture complète de la page
+      export const handleBeforeUnload = (me: string) => {
+        const data = JSON.stringify({ status: "offline" });
+        navigator.sendBeacon(`/api/update-status/${me}`, data);
+      };
