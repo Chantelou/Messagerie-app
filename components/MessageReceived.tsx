@@ -25,7 +25,7 @@ function MessageReceived({ messages }: { messages: Message[] }) {
                     key={message.id}
                     className={`message-wrapper ${message.sender === user ? 'sent' : "received"}`}
                 >
-                    <div className="message-bubble">
+                    <div className="message-bubble overflow-hidden">
 
                         <div className="message-text">{message.text
                             && message.text.includes("https://ik.imagekit.io/")
