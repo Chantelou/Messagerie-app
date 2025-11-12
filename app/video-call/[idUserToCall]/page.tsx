@@ -1,5 +1,4 @@
 "use client"
-import { useParams } from 'next/navigation'
 import dynamic from "next/dynamic";
 
 // Import du composant dynamiquement (⚡ ssr désactivé) pour eviter son execution coté serveur au lancement de l'app

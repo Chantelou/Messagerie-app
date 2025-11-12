@@ -208,7 +208,7 @@ function VideoLive() {
 
     const { currentUser } = CurentUserStore() //L'utilisateur avec qui on veut discuter
 
-    const [meetingId, setMeetingId] = useState<string | ParamValue | null>(null); // Stocke l'ID de la réunion actuelle
+    const [meetingId, setMeetingId] = useState<string | null>(null); // Stocke l'ID de la réunion actuelle
 
     // Fonction pour récupérer ou créer une réunion
     const getMeetingAndToken = async (id?: string) => {
@@ -256,8 +256,8 @@ function VideoLive() {
                 const decrocheBtn = document.getElementById("decrocheBtn")
 
                 if (currentUser?.id !== idUserToCall) { //On rejoind un appel (invité)
-                    
-                    setMeetingId(idUserToCall)
+                    const idmeet = String(idUserToCall)
+                    setMeetingId(idmeet && idmeet)
                     //On attend quelques milliseconde avant de rejoindre l'appel automatiquement
                    setTimeout(() => {
                         decrocheBtn?.click()
