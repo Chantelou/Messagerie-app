@@ -9,6 +9,7 @@ import axios from 'axios';
 import { GetMessages } from '@/controllers/GetMessages';
 import useSWR from 'swr';
 import { OnsignalPushSubscribe } from '@/controllers/PushSubscribe';
+import Link from 'next/link';
 
 function Discutions({ currentContact, contacts }: { currentContact: string, contacts: Contact[] }) {
 
@@ -66,12 +67,13 @@ function Discutions({ currentContact, contacts }: { currentContact: string, cont
                             </div>
                         </div>
                         <div className="header-actions">
+                            <Link href={`/video-call/${currentUser.id}`} className="header-btn">
+                                <Video size={20} />
+                            </Link>
                             <button className="header-btn">
                                 <Phone size={20} />
                             </button>
-                            <button className="header-btn">
-                                <Video size={20} />
-                            </button>
+                            
                             <button className="header-btn">
                                 <Info size={20} />
                             </button>
